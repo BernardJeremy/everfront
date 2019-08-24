@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "jasmine": true
+      },
+    "parser": "babel-eslint",
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "space-in-parens": [ 0, "always" ],
+      "template-curly-spacing": [ 2, "always" ],
+      "array-bracket-spacing": [ 2, "always" ],
+      "object-curly-spacing": [ 2, "always" ],
+      "computed-property-spacing": [ 2, "always" ],
+      "no-multiple-empty-lines": [ 2, { "max": 1, "maxEOF": 0, "maxBOF": 0 } ],
+      "quotes": [ 1, "single", "avoid-escape" ],
+      "no-use-before-define": [ 2, { "functions": false } ],
+      "semi": [0, "never"],
+      "prefer-const": 2,
+      "react/prefer-es6-class": 0,
+      "react/jsx-filename-extension": 0,
+      "react/jsx-curly-spacing": [ 2, "always" ],
+      "react/jsx-indent": [ 2, 2 ],
+      "react/prop-types": [ 1 ],
+      "react/no-array-index-key": [ 1 ],
+      "class-methods-use-this": [ 1 ],
+      "no-undef": [ 2 ],
+      "no-case-declarations": [ 1 ],
+      "no-return-assign": [ 1 ],
+      "no-param-reassign": [ 1 ],
+      "no-shadow": [ 1 ],
+      "camelcase": [ 1 ],
+      "no-underscore-dangle" : [0, "always"],
+      "constructor-super": 1,      // verify super() callings in constructors (off by default)
+      "no-this-before-super": 1,   // disallow to use this/super before super() calling in constructors (off by default)
+      "no-var": 2,                 // require let or const instead of var (off by default)
+      "object-shorthand": 2,       // require method and property shorthand syntax for object literals (off by default)
+    }
+  }
