@@ -1,5 +1,8 @@
-export default class Tileset {
-	constructor(url, fileName, width, height, tileWidth, tileHeight) {
+import Ressource from './Ressource';
+
+export default class Tileset extends Ressource {
+    constructor(url, fileName, width, height, tileWidth, tileHeight) {
+        super()
         this.src = `${ url }/${ fileName }`
         this.width = width
         this.height = height
@@ -24,14 +27,14 @@ export default class Tileset {
         this.image.src = src
     }
 
-    drawTile(id, context, xDestination, yDestination) {
+    drawTile(id, xDestination, yDestination) {
         const tileCoordX = id % this.tileLineLength || this.tileLineLength;
         const tileCoordY = Math.ceil(id / this.tileLineLength);
         
         const tilePixelX = (tileCoordX - 1) * this.tileWidth;
         const tilePixelY = (tileCoordY - 1) * this.tileHeight;
         
-        context.drawImage(
+        this.display.drawImageFromRect(
             this.image,
             tilePixelX,
             tilePixelY,
@@ -39,8 +42,6 @@ export default class Tileset {
             this.tileHeight,
             xDestination,
             yDestination,
-            this.tileWidth,
-            this.tileHeight
         );
     }
 }

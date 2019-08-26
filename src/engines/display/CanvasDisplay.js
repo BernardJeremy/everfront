@@ -9,4 +9,18 @@ export default class CanvasDisplay {
   clear() {
     this.context.clearRect(0, 0, this.height, this.width)
   }
+
+  drawImageFromRect(image, tilePixelX, tilePixelY, tileWidth, tileHeight, xDestination, yDestination) {
+    this.context.drawImage(
+      image,
+      tilePixelX,
+      tilePixelY,
+      tileWidth,
+      tileHeight,
+      xDestination,
+      yDestination,
+      tileWidth,
+      tileHeight
+  );
+  }
 }

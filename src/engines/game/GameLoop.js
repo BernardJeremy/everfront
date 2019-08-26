@@ -24,7 +24,7 @@ export default class GameLoop {
   
   render() {
     this.display.clear()
-    this.clickedLocations.forEach(location => this.assets.groundTileset.drawTile(location.id, this.display.context, location.x, location.y))
+    this.clickedLocations.forEach(location => this.assets.groundTileset.drawTile(location.id, location.x, location.y))
   }
   
   main() {

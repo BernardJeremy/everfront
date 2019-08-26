@@ -16,12 +16,11 @@ class Canvas extends React.Component {
   componentDidMount() {
     this.canvas = this.canvasRef.current
     this.context = this.canvas.getContext('2d')
-    this.display = new CanvasDisplay(this.canvas, this.context, this.props.width, this.props.height)
+    this.display = window.display = new CanvasDisplay(this.canvas, this.context, this.props.width, this.props.height)
     this.gameLoop = new GameLoop(this.display)
   }
 
   render() {
-
     const handleCanvasClick = (e) => {
       const rect = this.canvas.getBoundingClientRect()
       const x = e.clientX - rect.left
