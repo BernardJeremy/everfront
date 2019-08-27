@@ -36,12 +36,12 @@ export default class Tileset extends Ressource {
         
         this.display.drawImageFromRect(
             this.image,
+            xDestination,
+            yDestination,
             tilePixelX,
             tilePixelY,
             this.tileWidth,
             this.tileHeight,
-            xDestination,
-            yDestination,
         );
     }
 }
