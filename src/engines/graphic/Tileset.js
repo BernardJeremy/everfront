@@ -1,11 +1,9 @@
 import Ressource from './Ressource';
 
 export default class Tileset extends Ressource {
-    constructor(url, fileName, width, height, tileWidth, tileHeight) {
+    constructor(src, width, height, tileWidth, tileHeight) {
         super()
-        this.src = `${ url }/${ fileName }`
-        this.width = width
-        this.height = height
+        this.src = src
         this.tileWidth = tileWidth
         this.tileHeight = tileHeight
         this.tileLineLength = width / tileWidth
@@ -14,6 +12,10 @@ export default class Tileset extends Ressource {
         this.image = null
 
         this.loadImage(this.src);
+    }
+
+    get loaded() {
+      return !!this.image.complete
     }
 
     loadImage(src) {

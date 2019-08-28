@@ -3,8 +3,8 @@ import './css/App.css'
 import Canvas from './Canvas';
 
 const canvaSize = {
-  width: 1380,
-  height: 780,
+  width: 28 * 32,
+  height: 18 * 32,
 }
 
 const App = () =>
